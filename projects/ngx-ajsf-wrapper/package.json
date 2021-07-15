@@ -1,0 +1,53 @@
+{
+  "name": "ngx-ajsf-wrapper",
+  "version": "1.0.0-beta.1",
+  "description": "Angular JSON Schema Form Builder or Renderer",
+  "author": "https://github.com/venky-web/ngx-ajsf/graphs/contributors",
+  "keywords": [
+    "Angular",
+    "ng",
+    "Angular9",
+    "Angular 9",
+    "ng9",
+    "Angular10",
+    "Angular 10",
+    "ng10",
+    "Angular11",
+    "Angular 11",
+    "ng11",
+    "JSON Schema",
+    "form",
+    "forms",
+    "form builder",
+    "form renderer",
+    "ajsf",
+    "ngx-ajsf",
+    "ngx-ajsf-wrapper",
+    "ajsf-wrapper",
+    "angular json schema form"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venky-web/ngx-ajsf"
+  },
+  "bugs": {
+    "url": "https://github.com/venky-web/ngx-ajsf/issues"
+  },
+  "private": false,
+  "peerDependencies": {
+    "@angular/common": "^11.2.3",
+    "@angular/core": "^11.2.3",
+    "@angular/forms": "^11.2.3",
+    "@angular/platform-browser": "^11.2.3",
+    "rxjs": "^6.0.0",
+    "lodash-es": "^4.17.15"
+  },
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.3"
+  }
+}
