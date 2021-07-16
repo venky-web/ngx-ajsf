@@ -52,6 +52,10 @@
       "@ajsf/material/*": [
         "dist/@ajsf/material/*"
       ],
+      "ngx-ajsf-bootstrap4-wrapper": [
+        "dist/ngx-ajsf-bootstrap4-wrapper/ngx-ajsf-bootstrap4-wrapper",
+        "dist/ngx-ajsf-bootstrap4-wrapper"
+      ],
       "ngx-ajsf-wrapper": [
         "dist/ngx-ajsf-wrapper/ngx-ajsf-wrapper",
         "dist/ngx-ajsf-wrapper"
