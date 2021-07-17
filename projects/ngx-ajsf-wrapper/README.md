@@ -2,6 +2,9 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
+# Install
+`npm i ngx-ajsf-wrapper`
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project ngx-ajsf-wrapper` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-ajsf-wrapper`.

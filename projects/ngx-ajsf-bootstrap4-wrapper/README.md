@@ -2,6 +2,9 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
 
+# Install
+`npm i ngx-ajsf-bootstrap4-wrapper`
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project ngx-ajsf-bootstrap4-wrapper` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-ajsf-bootstrap4-wrapper`.
