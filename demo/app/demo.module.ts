@@ -12,14 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { NgxJsonSchemaFormModule } from 'ngx-ajsf-wrapper';
+import { NgxAjsfBootstrap4WrapperModule } from 'ngx-ajsf-bootstrap4-wrapper';
+
 import { AceEditorDirective } from './ace-editor.directive';
 import { DemoComponent } from './demo.component';
 import { DemoRootComponent } from './demo-root.component';
 import { routes } from './demo.routes';
-import { JsonSchemaFormModule } from '@ajsf/core';
-import { Bootstrap4FrameworkModule } from '@ajsf/bootstrap4';
-import { Bootstrap3FrameworkModule } from '@ajsf/bootstrap3';
-import { MaterialDesignFrameworkModule } from '@ajsf/material';
 
 @NgModule({
   declarations: [AceEditorDirective, DemoComponent, DemoRootComponent],
@@ -28,10 +28,8 @@ import { MaterialDesignFrameworkModule } from '@ajsf/material';
     HttpClientModule, MatButtonModule, MatCardModule, MatCheckboxModule,
     MatIconModule, MatMenuModule, MatSelectModule, MatToolbarModule,
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
-    Bootstrap4FrameworkModule,
-    Bootstrap3FrameworkModule,
-    MaterialDesignFrameworkModule,
-    JsonSchemaFormModule
+    NgxJsonSchemaFormModule,
+    NgxAjsfBootstrap4WrapperModule,
   ],
   bootstrap: [DemoRootComponent]
 })

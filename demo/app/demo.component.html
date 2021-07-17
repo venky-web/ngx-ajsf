@@ -148,7 +148,7 @@
       <div *ngIf="!formActive">{{jsonFormStatusMessage}}</div>
 
       <!-- This is the form! -->
-      <json-schema-form
+      <!-- <json-schema-form
         *ngIf="formActive"
         loadExternalAssets="true"
         [form]="jsonFormObject"
@@ -159,7 +159,19 @@
         (onSubmit)="onSubmit($event)"
         (isValid)="isValid($event)"
         (validationErrors)="validationErrors($event)">
-      </json-schema-form>
+      </json-schema-form> -->
+      <ngx-json-schema-form
+        *ngIf="formActive"
+        loadExternalAssets="true"
+        [form]="jsonFormObject"
+        [options]="jsonFormOptions"
+        [framework]="selectedFramework"
+        [language]="selectedLanguage"
+        (onChanges)="onChanges($event)"
+        (onSubmit)="onSubmit($event)"
+        (isValid)="isValid($event)"
+        (validationErrors)="validationErrors($event)">
+      </ngx-json-schema-form>
 
     </div>
     <hr>

@@ -12,8 +12,8 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 
-import cloneDeep from 'lodash/cloneDeep';
-import isEqual from 'lodash/isEqual';
+import cloneDeep from 'lodash-es/cloneDeep';
+import isEqual from 'lodash-es/isEqual';
 
 import { convertSchemaToDraft6 } from './shared/convert-schema-to-draft6.function';
 import { forEach, hasOwn } from './shared/utility.functions';
@@ -161,7 +161,7 @@ export class NgxJsonSchemaFormComponent implements ControlValueAccessor, OnChang
       scriptTag.type = 'text/javascript';
       scriptTag.async = true;
       scriptTag.setAttribute('class', 'ajsf');
-      document.getElementsByTagName('head')[0].appendChild(scriptTag);
+      document.getElementById('ngx-ajsf-wrapper-scripts').appendChild(scriptTag);
     });
   }
   private loadStyleSheets() {
@@ -171,7 +171,7 @@ export class NgxJsonSchemaFormComponent implements ControlValueAccessor, OnChang
       linkTag.rel = 'stylesheet';
       linkTag.href = stylesheet;
       linkTag.setAttribute('class', 'ajsf');
-      document.getElementsByTagName('head')[0].appendChild(linkTag);
+      document.getElementById('ngx-ajsf-wrapper-styles').appendChild(linkTag);
     });
   }
   private loadAssets() {
