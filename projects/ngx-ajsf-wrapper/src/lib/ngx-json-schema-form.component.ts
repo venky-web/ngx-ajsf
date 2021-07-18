@@ -1,19 +1,18 @@
 
 import {
-    ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component,
-    EventEmitter,
-    Input,
-    OnChanges,
-    OnInit,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
   Output,
   SimpleChanges,
 } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 
-import cloneDeep from 'lodash-es/cloneDeep';
-import isEqual from 'lodash-es/isEqual';
+import { cloneDeep, isEqual } from 'lodash-es';
 
 import { convertSchemaToDraft6 } from './shared/convert-schema-to-draft6.function';
 import { forEach, hasOwn } from './shared/utility.functions';
@@ -150,49 +149,12 @@ export class NgxJsonSchemaFormComponent implements ControlValueAccessor, OnChang
     public jsf: NgxJsonSchemaFormService,
   ) { }
 
-  private resetScriptsAndStyleSheets() {
-    document.querySelectorAll('.ajsf').forEach(element => element.remove());
-  }
-  private loadScripts() {
-    const scripts = this.frameworkLibrary.getFrameworkScripts();
-    scripts.map(script => {
-      const scriptTag: HTMLScriptElement = document.createElement('script');
-      scriptTag.src = script;
-      scriptTag.type = 'text/javascript';
-      scriptTag.async = true;
-      scriptTag.setAttribute('class', 'ajsf');
-      document.getElementById('ngx-ajsf-wrapper-scripts').appendChild(scriptTag);
-    });
-  }
-  private loadStyleSheets() {
-    const stylesheets = this.frameworkLibrary.getFrameworkStylesheets();
-    stylesheets.map(stylesheet => {
-      const linkTag: HTMLLinkElement = document.createElement('link');
-      linkTag.rel = 'stylesheet';
-      linkTag.href = stylesheet;
-      linkTag.setAttribute('class', 'ajsf');
-      document.getElementById('ngx-ajsf-wrapper-styles').appendChild(linkTag);
-    });
-  }
-  private loadAssets() {
-    this.resetScriptsAndStyleSheets();
-    this.loadScripts();
-    this.loadStyleSheets();
-  }
   ngOnInit() {
     this.updateForm();
-    this.loadAssets();
   }
 
   ngOnChanges(changes: SimpleChanges) {
     this.updateForm();
-    // Check if there's changes in Framework then load assets if that's the
-    if (changes.framework) {
-      if (!changes.framework.isFirstChange() &&
-        (changes.framework.previousValue !== changes.framework.currentValue)) {
-        this.loadAssets();
-      }
-    }
   }
 
   writeValue(value: any) {

@@ -1,6 +1,6 @@
 {
   "name": "ngx-ajsf-bootstrap4-wrapper",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Angular JSON Schema Form builder using Bootstrap 4 UI; A fork from ajsf",
   "author": "https://github.com/venky-web/ngx-ajsf/graphs/contributors",
   "keywords": [
@@ -42,10 +42,11 @@
     "@angular/platform-browser": "^11.2.3",
     "rxjs": "^6.0.0",
     "lodash-es": "^4.17.15",
-    "ajv": "^6.10.0"
+    "ajv": "^6.10.0",
+    "bootstrap": "^4.3.1"
   },
   "dependencies": {
-    "ngx-ajsf-wrapper": "^1.0.0-beta.1",
+    "ngx-ajsf-wrapper": "^1.0.0-beta.2",
     "tslib": "^2.0.0"
   },
   "devDependencies": {

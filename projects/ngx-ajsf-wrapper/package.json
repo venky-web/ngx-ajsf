@@ -1,6 +1,6 @@
 {
   "name": "ngx-ajsf-wrapper",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Angular JSON Schema Form Builder or Renderer; A fork from ajsf",
   "author": "https://github.com/venky-web/ngx-ajsf/graphs/contributors",
   "keywords": [

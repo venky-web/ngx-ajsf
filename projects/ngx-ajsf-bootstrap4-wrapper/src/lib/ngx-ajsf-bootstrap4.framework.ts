@@ -12,13 +12,7 @@ export class NgxAjsfBootstrap4Wrapper extends Framework {
 
   framework = NgxAjsfBootstrap4WrapperComponent;
 
-  stylesheets = [
-    '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
-  ];
+  stylesheets = [];
 
-  scripts = [
-    '//code.jquery.com/jquery-3.3.1.slim.min.js',
-    '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
-    '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js',
-  ];
+  scripts = [];
 }
